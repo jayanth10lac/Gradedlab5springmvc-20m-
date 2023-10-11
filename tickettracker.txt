@@ -1,0 +1,25 @@
+package org.greatlearning.tickettracker.entity;
+import javax.annotation.processing.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.column;
+import org.springframework.data.relational.core.mapping.Table;
+import com.greatlearning.entity.AllArgsConstructor;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "Tickets")
+public class TicketTrackerEntity {
+   @Id
+   @Column(value= "id")
+   @Generated(name = GenerationType.IDENTITY, value = { " Tickets"})
+    private int id;
+   @Column(value = "title")
+   private String title;
+   @Column(value = "content")
+   private String content;
+   @Column(value = "date")
+   private String date;
+}
